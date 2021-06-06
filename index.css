@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan&display=swap");
+
+:root {
+  --calculator-margin: 30px;
+
+  /* -------------------- */
+  /* ---- Light mode ---- */
+  /* -------------------- */
+
+  /* ---- BACKGROUNDS ---- */
+
+  /* main background */
+  --very-dark-des-blue-main: #3a4764;
+  --light-gray-main: hsl(0, 0%, 90%);
+  --very-dark-violet-main: hsl(268, 75%, 9%);
+
+  /* toggle background, keypad background */
+  --very-dark-des-blue: hsl(223, 31%, 20%);
+  --greish-red: hsl(0, 5%, 81%);
+  --very-dark-violet: hsl(268, 71%, 12%);
+
+  /* screen background */
+  --very-dark-des-blue-screen: hsl(224, 36%, 15%);
+  --very-light-gray: hsl(0, 0%, 93%);
+  
+
+  /* -- KEYS -- */
+  /* - RESET & DEL keys - */
+
+  /* key background */
+  --des-dark-blue: hsl(225, 21%, 49%);
+  --dark-moderate-cyan: hsl(185, 42%, 37%);
+  --dark-violet: hsl(281, 89%, 26%);
+
+  /* key shadow */
+  --des-dark-blue-shadow: hsl(224, 28%, 35%);
+  --very-dark-cyan: hsl(185, 58%, 25%);
+  --vivid-magenta: hsl(285, 91%, 52%);
+
+  /* '=' key & toggle button */
+  /* key background */
+  --red: hsl(6, 63%, 50%);
+  --organge: hsl(25, 98%, 40%);
+  --pure-cyan: hsl(176, 100%, 44%);
+
+  /* key shadow */
+  --dark-red: hsl(6, 70%, 34%);
+  --dark-orange:  hsl(25, 99%, 27%);
+  --soft-cyan: hsl(177, 92%, 70%);
+
+  /* the other keys */
+  /* key background */
+  --light-grayish-orange: hsl(30, 25%, 89%);
+  --light-grayish-yellow: hsl(45, 7%, 89%);
+  --very-dark-violet-key: hsl(268, 47%, 21%);
+
+  /* key shadow */
+  --grayish-orange: hsl(28, 16%, 65%);
+  --dark-grayish-orange: hsl(35, 11%, 61%);
+  --dark-magenta: hsl(290, 70%, 36%);
+
+  /* -- TEXT -- */
+  --very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --very-dark-grayish-yellow: hsl(60, 10%, 19%);
+  --light-yellow: hsl(52, 100%, 62%);
+  --very-dark-blue: hsl(198, 20%, 13%);
+
+  --white: hsl(0, 0%, 100%);
+}
+
+/* swithced mode 2 */
+#theme-switch1:checked ~ #calculator {
+  --text: var(--white);
+  --background-color: var(--very-dark-des-blue-main);
+  --reset-del-color: var(--white);
+  --reset-del-background-color: var(--des-dark-blue);
+  --reset-del-background-shadow: var(--des-dark-blue-shadow);
+  --equal-color: var(--red);
+  --equal-shadow-color: var(--dark-red);
+  --keyboard-background-color: var(--very-dark-des-blue);
+  --panel-input-color: var(--very-dark-des-blue-screen);
+  --generic-key-color: var(--light-grayish-orange);
+  --generic-key-shadow-color: var(--grayish-orange);
+  --key-number-color: var(--very-dark-grayish-blue);
+  --key-equal-color: var(--white);
+}
+
+#theme-switch2:checked ~ #calculator {
+  --text: var(--very-dark-grayish-yellow);
+  --background-color: var(--light-gray-main);
+  --reset-del-color: var(--white);
+  --reset-del-background-color: var(--dark-moderate-cyan);
+  --reset-del-background-shadow: var(--very-dark-cyan);
+  --equal-color: var(--organge);
+  --equal-shadow-color: var(--dark-orange);
+  --keyboard-background-color: var(--greish-red);
+  --panel-input-color: var(--very-light-gray);
+  --generic-key-color: var(--light-grayish-yellow);
+  --generic-key-shadow-color: var(--dark-grayish-orange);
+  --key-number-color: var(--very-dark-grayish-yellow);
+  --key-equal-color: var(--white);
+}
+
+#theme-switch3:checked ~ #calculator {
+  --text: var(--light-yellow);
+  --background-color: var(--very-dark-violet-main);
+  --reset-del-color: var(--white);
+  --reset-del-background-color: var(--dark-violet);
+  --reset-del-background-shadow: var(--vivid-magenta);
+  --equal-color: var(--pure-cyan);
+  --equal-shadow-color: var(--soft-cyan);
+  --keyboard-background-color: var(--very-dark-violet);
+  --panel-input-color: var(--very-dark-violet);
+  --generic-key-color: var(--very-dark-violet-key);
+  --generic-key-shadow-color: var(--dark-magenta);
+  --key-number-color: var(--light-yellow);
+  --key-equal-color: var(--very-dark-blue);
+}
+
+html,
+body {
+  font-family: "Spartan", sans-serif;
+
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 32px;
+}
+
+/* ---- */
+/* id's */
+/* ---- */
+
+#calculator {
+  padding: var(--calculator-margin);
+  background-color: var(--background-color);
+
+  height: calc(100vh - var(--calculator-margin) * 2);
+  display: grid;
+  grid-template-rows: 10% 20% 70%;
+}
+
+#del-btn,
+#reset-btn,
+#equal-btn {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* los botones azules de RESET y DEL */
+#del-btn,
+#reset-btn {
+  color: var(--reset-del-color);
+  background-color: var(--reset-del-background-color);
+  box-shadow: 0 6px var(--reset-del-background-shadow);
+}
+
+#del-btn:active,
+#reset-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px var(--reset-del-background-shadow);
+}
+
+/* los botones largos de RESET y '=' */
+#equal-btn,
+#reset-btn {
+  grid-column: span 2;
+  margin: 5%;
+}
+
+#equal-btn {
+  color: var(--key-equal-color);
+  background-color: var(--equal-color);
+  box-shadow: 0 6px var(--equal-shadow-color);
+}
+
+#equal-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px var(--equal-shadow-color);
+}
+
+#keyboard {
+  background-color: var(--keyboard-background-color);
+  /* margin: 9px; */
+  border-radius: 3%;
+  padding: 20px;
+
+  display: grid;
+  grid-template-rows: repeat(5, 20%);
+  grid-template-columns: repeat(4, 25%);
+}
+
+#menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  border-radius: 10px;
+  /* background-color: var(--very-dark-des-blue-screen); */
+}
+
+#panel-input {
+  background-color: var(--panel-input-color);
+
+  text-align: right;
+  color: var(--text);
+  font-size: 32px;
+  font-family: "Spartan", arial;
+  font-weight: 700;
+
+  padding-right: 20px;
+  padding-left: 20px;
+
+  width: 100%;
+  height: 70%;
+
+  border: 0;
+  border-radius: 10px;
+}
+
+#theme-switch1 {
+  left: 75%;
+  height: 16%;
+}
+
+#theme-switch2 {
+  left: 80%;
+  height: 16%;
+}
+
+#theme-switch3 {
+  left: 85%;
+  height: 16%;
+}
+
+/* ------- */
+/* classes */
+/* ------- */
+
+.my-btn {
+  /* inside the button */
+  font-family: "Spartan", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* the button itself */
+  color: var(--key-number-color);
+  background-color: var(--generic-key-color);
+
+  margin: 8%;
+  margin-bottom: 13px;
+
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 6px var(--generic-key-shadow-color);
+
+}
+
+.my-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px var(--generic-key-shadow-color);
+}
+
+.theme-switcher {
+  position: absolute;
+}

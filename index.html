@@ -1,25 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
+    <script defer src="./index.js"></script>
 
-  <title>Frontend Mentor | Calculator app</title>
-</head>
+    <title>Calculator app</title>
+  </head>
 
-<body>
-  
+  <body>
+    <!-- the main div -->
+    <input type="radio" name="theme-swith" checked="checked" class="theme-switcher" id="theme-switch1" />
+    <input type="radio" name="theme-swith" class="theme-switcher" id="theme-switch2" />
+    <input type="radio" name="theme-swith" class="theme-switcher" id="theme-switch3" />
+    <div id="calculator">
 
+      <!-- displays the name and the theme selector -->
+      <div id="menu">
+        <!-- <input type="checkbox" name="theme-swith" id="theme-switch" /> -->
+        <p><b>calc</b></p>
+      </div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Pau Vidal</a>.
-  </div>
-</body>
+      <!-- displays the intput/output -->
+      <div id="panel">
+        <input id="panel-input" type="text" />
+      </div>
 
+      <!-- displays the keyboard -->
+      <div id="keyboard">
+        <button onclick="btnNbrClicked(event)" class="my-btn">7</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">8</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">9</button>
+        <button onclick="btnDeleteClicked(event)" class="my-btn" id="del-btn">
+          DEL
+        </button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">4</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">5</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">6</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">+</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">1</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">2</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">3</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">-</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">.</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">0</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">/</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">x</button>
+        <button onclick="bntResetClicked(event)" class="my-btn" id="reset-btn">
+          RESET
+        </button>
+        <button onclick="btnEqualClicked(event)" class="my-btn" id="equal-btn">
+          =
+        </button>
+      </div>
+    </div>
+  </body>
 </html>
