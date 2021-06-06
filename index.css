@@ -22,7 +22,6 @@
   /* screen background */
   --very-dark-des-blue-screen: hsl(224, 36%, 15%);
   --very-light-gray: hsl(0, 0%, 93%);
-  
 
   /* -- KEYS -- */
   /* - RESET & DEL keys - */
@@ -45,7 +44,7 @@
 
   /* key shadow */
   --dark-red: hsl(6, 70%, 34%);
-  --dark-orange:  hsl(25, 99%, 27%);
+  --dark-orange: hsl(25, 99%, 27%);
   --soft-cyan: hsl(177, 92%, 70%);
 
   /* the other keys */
@@ -169,7 +168,7 @@ p {
 #equal-btn,
 #reset-btn {
   grid-column: span 2;
-  margin: 5%;
+  width: 95%;
 }
 
 #equal-btn {
@@ -186,7 +185,7 @@ p {
 #keyboard {
   background-color: var(--keyboard-background-color);
   /* margin: 9px; */
-  border-radius: 3%;
+  border-radius: 15px;
   padding: 20px;
 
   display: grid;
@@ -262,13 +261,16 @@ p {
   color: var(--key-number-color);
   background-color: var(--generic-key-color);
 
-  margin: 8%;
-  margin-bottom: 13px;
+  /* margin: 8%;
+  margin-bottom: 13px; */
 
   border: none;
   border-radius: 8px;
   box-shadow: 0 6px var(--generic-key-shadow-color);
 
+  width: 88%;
+  height: 70%;
+  place-self: center center;
 }
 
 .my-btn:active {
@@ -276,6 +278,18 @@ p {
   box-shadow: 0 2px var(--generic-key-shadow-color);
 }
 
+.my-label {
+  cursor: pointer;
+}
+
+/* input[checked="checked"] + .my-label + .check {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border-radius: 50%;
+} */
+
 .theme-switcher {
+  /* visibility: hidden; */
   position: absolute;
 }
