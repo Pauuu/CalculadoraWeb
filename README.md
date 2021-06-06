@@ -52,7 +52,7 @@ Users should be able to:
 ### Useful resources
 
 - [Grid guide](https://css-tricks.com/snippets/css/complete-guide-grid/) 
-- [Theme switcher](https://alexandersandberg.com/theme-switcher/) - This article which helped me finally understand how to switch between themes whitout using JS. I still have to learn and improve more with more practice, but it's a start. [Checkout his GitHub account](https://github.com/alexandersandberg)
+- [Theme switcher](https://alexandersandberg.com/theme-switcher/) - This article which helped me finally understand how to switch between themes whithout using JS. I still have to learn and improve more with more practice, but it's a start. [Checkout his GitHub account](https://github.com/alexandersandberg)
 
 ## Author
 Pau Vidal - [@Pauuu](https://github.com/Pauuu)
